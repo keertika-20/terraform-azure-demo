@@ -5,3 +5,7 @@ variable "subscription_id" {
 variable "tenant_id" {
   description = "Azure Tenant ID"
 }
+
+variable "client_id" {
+  description = "Azure Client ID"
+}
