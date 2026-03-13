@@ -20,8 +20,10 @@ resource "azurerm_public_ip" "demo_pip" {
   name                = "demo-pip"
   location            = azurerm_resource_group.demo.location
   resource_group_name = azurerm_resource_group.demo.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "Standard"
 }
+
 
 resource "azurerm_network_interface_security_group_association" "demo_nic_nsg" {
   network_interface_id      = azurerm_network_interface.demo_nic.id
