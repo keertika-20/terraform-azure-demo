@@ -22,7 +22,7 @@ resource "azurerm_linux_virtual_machine" "demo_vm" {
   }
 
   admin_ssh_key {
-    username   = "azureuser"
-    public_key = file("~/.ssh/id_rsa.pub")
-  }
+  username   = "azureuser"
+  public_key = var.public_key
+}
 }
