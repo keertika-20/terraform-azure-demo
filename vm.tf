@@ -14,12 +14,13 @@ resource "azurerm_linux_virtual_machine" "demo_vm" {
     storage_account_type = "Standard_LRS"
   }
 
-  source_image_reference {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "20.04-LTS"
-    version   = "latest"
-  }
+ source_image_reference {
+  publisher = "Canonical"
+  offer     = "0001-com-ubuntu-server-focal"
+  sku       = "20_04-lts"
+  version   = "latest"
+}
+
 
   admin_ssh_key {
   username   = "azureuser"
